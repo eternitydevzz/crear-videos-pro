@@ -1,0 +1,82 @@
+<!doctype html>
+<html><head><meta charset="UTF-8"></head><body>
+<template>
+<style>@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-500-latin-fe1634.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-500-latin-ext-d9a6a0.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-700-latin-fe1634.woff2) format('woff2');font-weight:700;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-700-latin-ext-d9a6a0.woff2) format('woff2');font-weight:700;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'News';src:url(assets/fonts/Newsreader-italic-500-latin-78bd98.woff2) format('woff2');font-weight:500;font-style:italic;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'News';src:url(assets/fonts/Newsreader-italic-500-latin-ext-e36b6b.woff2) format('woff2');font-weight:500;font-style:italic;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Spline';src:url(assets/fonts/SplineSansMono-normal-500-latin-53329b.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Spline';src:url(assets/fonts/SplineSansMono-normal-500-latin-ext-62a811.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+#g05-tipos{position:absolute;inset:0;overflow:hidden;font-family:'Hanken',sans-serif;color:#101010}
+#g05-tipos .bgl{position:absolute;inset:0;background:#F5F6F8}
+#g05-tipos .glow{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(0,80,224,.20),rgba(0,80,224,0) 70%)}
+#g05-tipos .g1{left:-380px;top:-380px;width:1000px;height:1000px}
+#g05-tipos .g2{right:-420px;bottom:-200px;width:1100px;height:1100px}
+#g05-tipos .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(16,16,16,.045) 2px,transparent 2px),linear-gradient(90deg,rgba(16,16,16,.045) 2px,transparent 2px);background-size:72px 72px}
+#g05-tipos .bl{--b:0;filter:blur(calc(var(--b)*1px))}
+#g05-tipos .card{position:absolute;background:#fff;border-radius:36px;box-shadow:0 30px 80px rgba(16,24,40,.14),0 4px 14px rgba(16,24,40,.06)}
+#g05-tipos .mono{font-family:'Spline',monospace;font-weight:500;letter-spacing:3px;text-transform:uppercase}
+#g05-tipos .serif{font-family:'News',serif;font-style:italic;font-weight:500;color:#0050E0}
+#g05-tipos .abs{position:absolute}
+#g05-tipos .full{position:absolute;inset:0}
+
+#g05-tipos .box{left:140px;top:300px;width:800px;height:720px;display:flex;align-items:center;justify-content:center}
+#g05-tipos .aa{font-size:400px;line-height:1;font-weight:700;letter-spacing:-10px}
+#g05-tipos .tag{left:190px;top:340px;font-size:26px;color:#6b7280}
+#g05-tipos .tag2{right:190px;top:340px;font-size:26px;color:#6b7280}
+#g05-tipos .pal{left:140px;width:800px;top:1090px;height:180px;display:flex;align-items:center;justify-content:center;gap:28px}
+#g05-tipos .sw{display:block;width:118px;height:118px;border-radius:30px;box-shadow:0 14px 30px rgba(16,24,40,.18)}
+</style>
+<div id="g05-tipos" data-composition-id="g05-tipos" data-width="1080" data-height="1920">
+<div class="bgl"></div><div class="grid"></div><div class="glow g1"></div><div class="glow g2"></div>
+<div id="g05-tipos-wrap" class="full bl">
+
+<div class="card box bl" id="g05-tipos-box"><span class="aa" id="g05-tipos-aa">Aa</span></div>
+<div class="abs mono tag">Tipografía</div><div class="abs mono tag2" id="g05-tipos-t2">Color</div>
+<div class="card pal bl" id="g05-tipos-pal"><i class="sw" id="g05-tipos-sw0" style="background:#0050E0"></i><i class="sw" id="g05-tipos-sw1" style="background:#D97757"></i><i class="sw" id="g05-tipos-sw2" style="background:#16A34A"></i><i class="sw" id="g05-tipos-sw3" style="background:#F5B700"></i><i class="sw" id="g05-tipos-sw4" style="background:#101010"></i></div>
+
+</div>
+</div>
+<script>
+(function(){
+const tl = gsap.timeline({paused: true});
+
+const F = 1/30;
+const sn = t => Math.round(t*30)/30;
+const IN = (sel, t, o) => {const r = (o&&o.rot)||0; const f = Object.assign({y: 90, scale: .92, "--b": 14, opacity: 0}, o||{}); delete f.rot; return tl.fromTo(sel, f, {y: 0, x: 0, scale: 1, rotation: r, "--b": 0, opacity: 1, duration: .32, ease: "power3.out"}, sn(t));};
+const POP = (sel, t, r) => tl.fromTo(sel, {scale: 0, opacity: 0, rotation: (r||0) - 12}, {scale: 1, opacity: 1, rotation: r||0, duration: .3, ease: "back.out(2.4)"}, sn(t));
+const SCENE_IN = () => tl.fromTo("#g05-tipos-wrap", {scale: 1.12, "--b": 18, opacity: .2}, {scale: 1, "--b": 0, opacity: 1, duration: .22, ease: "power3.out"}, 0);
+
+SCENE_IN();
+IN("#g05-tipos-box", 0);
+tl.set("#g05-tipos-aa", {fontFamily: "'Hanken'", fontWeight: 700, fontStyle: "normal"}, 0.20);
+tl.set("#g05-tipos-aa", {fontFamily: "'News'", fontWeight: 500, fontStyle: "italic"}, 0.33);
+tl.set("#g05-tipos-aa", {fontFamily: "'Spline'", fontWeight: 500, fontStyle: "normal"}, 0.46);
+tl.set("#g05-tipos-aa", {fontFamily: "'Hanken'", fontWeight: 500, fontStyle: "normal"}, 0.59);
+tl.set("#g05-tipos-aa", {fontFamily: "'News'", fontWeight: 500, fontStyle: "italic"}, 0.72);
+tl.set("#g05-tipos-aa", {fontFamily: "'Hanken'", fontWeight: 700, fontStyle: "normal"}, 0.85);
+tl.set("#g05-tipos-aa", {fontFamily: "'News'", fontWeight: 500, fontStyle: "italic"}, 0.98);
+tl.set("#g05-tipos-aa", {fontFamily: "'Spline'", fontWeight: 500, fontStyle: "normal"}, 1.11);
+tl.set("#g05-tipos-aa", {fontFamily: "'Hanken'", fontWeight: 500, fontStyle: "normal"}, 1.24);
+
+IN("#g05-tipos-pal", 1.12, {y: 120});
+POP("#g05-tipos-sw0", 1.22, 0);POP("#g05-tipos-sw1", 1.27, 0);POP("#g05-tipos-sw2", 1.32, 0);POP("#g05-tipos-sw3", 1.37, 0);POP("#g05-tipos-sw4", 1.42, 0);
+tl.set("#g05-tipos-aa", {color: "#0050E0"}, 1.27);
+tl.set("#g05-tipos-aa", {color: "#D97757"}, 1.36);
+tl.set("#g05-tipos-aa", {color: "#16A34A"}, 1.45);
+tl.set("#g05-tipos-aa", {color: "#F5B700"}, 1.54);
+tl.set("#g05-tipos-aa", {color: "#101010"}, 1.63);
+tl.set("#g05-tipos-aa", {color: "#0050E0"}, 1.72);
+tl.set("#g05-tipos-aa", {color: "#D97757"}, 1.81);
+tl.set("#g05-tipos-aa", {color: "#16A34A"}, 1.90);
+tl.set("#g05-tipos-aa", {color: "#F5B700"}, 1.99);
+tl.set("#g05-tipos-aa", {color: "#101010"}, 2.08);
+
+
+tl.set({}, {}, 2.080);
+window.__timelines["g05-tipos"] = tl;
+})();
+</script>
+</template></body></html>

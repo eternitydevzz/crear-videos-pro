@@ -1,0 +1,14 @@
+{
+  "name": "crear-videos-pro",
+  "description": "Skills de edición de vídeo del equipo, con el Estilo Maestria, estilos de creadores y el stock",
+  "owner": {
+    "name": "Eternity"
+  },
+  "plugins": [
+    {
+      "name": "crear-videos-pro",
+      "source": "./",
+      "description": "Crear estilos de edición, editar con estilo, variaciones y adaptar para subir"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html><head><meta charset="UTF-8"></head><body>
+<template>
+<style>@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-500-latin-fe1634.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-500-latin-ext-d9a6a0.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-700-latin-fe1634.woff2) format('woff2');font-weight:700;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-700-latin-ext-d9a6a0.woff2) format('woff2');font-weight:700;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'News';src:url(assets/fonts/Newsreader-italic-500-latin-78bd98.woff2) format('woff2');font-weight:500;font-style:italic;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'News';src:url(assets/fonts/Newsreader-italic-500-latin-ext-e36b6b.woff2) format('woff2');font-weight:500;font-style:italic;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Spline';src:url(assets/fonts/SplineSansMono-normal-500-latin-53329b.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Spline';src:url(assets/fonts/SplineSansMono-normal-500-latin-ext-62a811.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+#g08-formatos{position:absolute;inset:0;overflow:hidden;font-family:'Hanken',sans-serif;color:#101010}
+#g08-formatos .bgl{position:absolute;inset:0;background:#F5F6F8}
+#g08-formatos .glow{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(0,80,224,.20),rgba(0,80,224,0) 70%)}
+#g08-formatos .g1{left:-380px;top:-380px;width:1000px;height:1000px}
+#g08-formatos .g2{right:-420px;bottom:-200px;width:1100px;height:1100px}
+#g08-formatos .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(16,16,16,.045) 2px,transparent 2px),linear-gradient(90deg,rgba(16,16,16,.045) 2px,transparent 2px);background-size:72px 72px}
+#g08-formatos .bl{--b:0;filter:blur(calc(var(--b)*1px))}
+#g08-formatos .card{position:absolute;background:#fff;border-radius:36px;box-shadow:0 30px 80px rgba(16,24,40,.14),0 4px 14px rgba(16,24,40,.06)}
+#g08-formatos .mono{font-family:'Spline',monospace;font-weight:500;letter-spacing:3px;text-transform:uppercase}
+#g08-formatos .serif{font-family:'News',serif;font-style:italic;font-weight:500;color:#0050E0}
+#g08-formatos .abs{position:absolute}
+#g08-formatos .full{position:absolute;inset:0}
+
+#g08-formatos .tile{width:640px;height:300px;display:flex;align-items:center;gap:44px;padding:0 60px}
+#g08-formatos .tn{font-size:76px;font-weight:700;letter-spacing:-2px}
+</style>
+<div id="g08-formatos" data-composition-id="g08-formatos" data-width="1080" data-height="1920">
+<div class="bgl"></div><div class="grid"></div><div class="glow g1"></div><div class="glow g2"></div>
+<div id="g08-formatos-wrap" class="full bl">
+
+<div class="card tile bl" id="g08-formatos-t0" style="top:270px;left:110px;transform:rotate(-4deg)"><svg viewBox="0 0 24 24" width="150" height="150" style="display:block"><defs><radialGradient id="ig" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="6.5" fill="url(#ig)"/><rect x="5" y="5" width="14" height="14" rx="4.2" fill="none" stroke="#fff" stroke-width="1.9"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="#fff" stroke-width="1.9"/><circle cx="16.6" cy="7.4" r="1.05" fill="#fff"/></svg><span class="tn">Reels</span></div>
+<div class="card tile bl" id="g08-formatos-t1" style="top:600px;left:330px;transform:rotate(3deg)"><svg viewBox="0 0 24 24" width="150" height="150" style="display:block"><rect width="24" height="24" rx="6.5" fill="#0050E0"/><path d="M6 10v4h2l5 3V7L8 10z" fill="#fff"/><path d="M15.5 9.5a3.5 3.5 0 010 5M17.5 7.5a6 6 0 010 9" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg><span class="tn">Anuncios</span></div>
+<div class="card tile bl" id="g08-formatos-t2" style="top:930px;left:140px;transform:rotate(-2deg)"><svg viewBox="0 0 28 20" width="170" height="121" style="display:block"><rect width="28" height="20" rx="5" fill="#FF0000"/><path d="M11.2 5.7v8.6l7.4-4.3z" fill="#fff"/></svg><span class="tn">YouTube</span></div>
+
+</div>
+</div>
+<script>
+(function(){
+const tl = gsap.timeline({paused: true});
+
+const F = 1/30;
+const sn = t => Math.round(t*30)/30;
+const IN = (sel, t, o) => {const r = (o&&o.rot)||0; const f = Object.assign({y: 90, scale: .92, "--b": 14, opacity: 0}, o||{}); delete f.rot; return tl.fromTo(sel, f, {y: 0, x: 0, scale: 1, rotation: r, "--b": 0, opacity: 1, duration: .32, ease: "power3.out"}, sn(t));};
+const POP = (sel, t, r) => tl.fromTo(sel, {scale: 0, opacity: 0, rotation: (r||0) - 12}, {scale: 1, opacity: 1, rotation: r||0, duration: .3, ease: "back.out(2.4)"}, sn(t));
+const SCENE_IN = () => tl.fromTo("#g08-formatos-wrap", {scale: 1.12, "--b": 18, opacity: .2}, {scale: 1, "--b": 0, opacity: 1, duration: .22, ease: "power3.out"}, 0);
+
+SCENE_IN();
+tl.fromTo("#g08-formatos-t0", {x: -900, rotation: -20}, {x: 0, rotation: -4, duration: .3, ease: "back.out(1.4)"}, 0.00);
+tl.fromTo("#g08-formatos-t1", {x: 900, rotation: 20}, {x: 0, rotation: 3, duration: .3, ease: "back.out(1.4)"}, 0.21);
+tl.fromTo("#g08-formatos-t2", {y: 900, rotation: 10}, {y: 0, rotation: -2, duration: .3, ease: "back.out(1.4)"}, 0.87);
+tl.to("#g08-formatos-wrap", {scale: 1.05, duration: 1.9, ease: "none"}, .25);
+
+tl.set({}, {}, 2.090);
+window.__timelines["g08-formatos"] = tl;
+})();
+</script>
+</template></body></html>

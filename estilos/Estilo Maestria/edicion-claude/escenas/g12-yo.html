@@ -1,0 +1,72 @@
+<!doctype html>
+<html><head><meta charset="UTF-8"></head><body>
+<template>
+<style>@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-500-latin-fe1634.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-500-latin-ext-d9a6a0.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-700-latin-fe1634.woff2) format('woff2');font-weight:700;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-700-latin-ext-d9a6a0.woff2) format('woff2');font-weight:700;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'News';src:url(assets/fonts/Newsreader-italic-500-latin-78bd98.woff2) format('woff2');font-weight:500;font-style:italic;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'News';src:url(assets/fonts/Newsreader-italic-500-latin-ext-e36b6b.woff2) format('woff2');font-weight:500;font-style:italic;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Spline';src:url(assets/fonts/SplineSansMono-normal-500-latin-53329b.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Spline';src:url(assets/fonts/SplineSansMono-normal-500-latin-ext-62a811.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+#g12-yo{position:absolute;inset:0;overflow:hidden;font-family:'Hanken',sans-serif;color:#101010}
+#g12-yo .bgl{position:absolute;inset:0;background:#F5F6F8}
+#g12-yo .glow{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(0,80,224,.20),rgba(0,80,224,0) 70%)}
+#g12-yo .g1{left:-380px;top:-380px;width:1000px;height:1000px}
+#g12-yo .g2{right:-420px;bottom:-200px;width:1100px;height:1100px}
+#g12-yo .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(16,16,16,.045) 2px,transparent 2px),linear-gradient(90deg,rgba(16,16,16,.045) 2px,transparent 2px);background-size:72px 72px}
+#g12-yo .bl{--b:0;filter:blur(calc(var(--b)*1px))}
+#g12-yo .card{position:absolute;background:#fff;border-radius:36px;box-shadow:0 30px 80px rgba(16,24,40,.14),0 4px 14px rgba(16,24,40,.06)}
+#g12-yo .mono{font-family:'Spline',monospace;font-weight:500;letter-spacing:3px;text-transform:uppercase}
+#g12-yo .serif{font-family:'News',serif;font-style:italic;font-weight:500;color:#0050E0}
+#g12-yo .abs{position:absolute}
+#g12-yo .full{position:absolute;inset:0}
+
+#g12-yo .bgb{position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,#2f74ff,#0050E0 55%,#0038a8)}
+#g12-yo .cm{left:0;right:0;top:330px;text-align:center;font-size:150px;color:#fff;font-family:'News',serif;font-style:italic}
+#g12-yo .yo{left:0;right:0;top:540px;text-align:center;font-size:420px;font-weight:700;letter-spacing:-14px;line-height:1;color:#fff}
+#g12-yo .bub{left:150px;top:980px;width:780px;height:230px;border-radius:44px;background:#fff;display:flex;align-items:center;gap:30px;padding:0 44px;box-shadow:0 40px 100px rgba(0,0,0,.3)}
+#g12-yo .avt{flex:none;width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,#ffb36b,#D97757)}
+#g12-yo .bt{display:flex;flex-direction:column;gap:10px}
+#g12-yo .un{font-size:28px;color:#5b6170}
+#g12-yo .tx{font-size:72px;font-weight:700;color:#101010}
+#g12-yo .heart{margin-left:auto;font-size:64px;color:#E5484D}
+#g12-yo .blk{position:absolute;inset:0;background:#000;opacity:0}
+</style>
+<div id="g12-yo" data-composition-id="g12-yo" data-width="1080" data-height="1920">
+
+<div id="g12-yo-wrap" class="full bl">
+
+<div class="bgb"></div>
+<div class="abs cm bl" id="g12-yo-cm">Comenta</div>
+<div class="abs yo" id="g12-yo-yo">YO</div>
+<div class="abs bub bl" id="g12-yo-bub"><span class="avt"></span><span class="bt"><span class="mono un">tú · ahora</span><span class="tx" id="g12-yo-tx"></span></span><span class="heart" id="g12-yo-h">♥</span></div>
+<div class="blk" id="g12-yo-blk"></div>
+
+</div>
+</div>
+<script>
+(function(){
+const tl = gsap.timeline({paused: true});
+
+const F = 1/30;
+const sn = t => Math.round(t*30)/30;
+const IN = (sel, t, o) => {const r = (o&&o.rot)||0; const f = Object.assign({y: 90, scale: .92, "--b": 14, opacity: 0}, o||{}); delete f.rot; return tl.fromTo(sel, f, {y: 0, x: 0, scale: 1, rotation: r, "--b": 0, opacity: 1, duration: .32, ease: "power3.out"}, sn(t));};
+const POP = (sel, t, r) => tl.fromTo(sel, {scale: 0, opacity: 0, rotation: (r||0) - 12}, {scale: 1, opacity: 1, rotation: r||0, duration: .3, ease: "back.out(2.4)"}, sn(t));
+const SCENE_IN = () => tl.fromTo("#g12-yo-wrap", {scale: 1.12, "--b": 18, opacity: .2}, {scale: 1, "--b": 0, opacity: 1, duration: .22, ease: "power3.out"}, 0);
+
+SCENE_IN();
+IN("#g12-yo-cm", 0.00, {y: 60});
+tl.fromTo("#g12-yo-yo", {scale: 3, opacity: 0, rotation: -8}, {scale: 1, opacity: 1, rotation: 0, duration: .3, ease: "back.out(2)"}, 0.34);
+IN("#g12-yo-bub", 0.54, {y: 200});
+tl.set("#g12-yo-tx", {textContent: "Y"}, 0.79);
+tl.set("#g12-yo-tx", {textContent: "YO"}, 0.89);
+POP("#g12-yo-h", 1.04, 0);
+tl.to("#g12-yo-yo", {scale: 1.06, duration: .5, ease: "sine.inOut", yoyo: true, repeat: 1}, 0.69);
+tl.to("#g12-yo-blk", {opacity: 1, duration: .3, ease: "none"}, 1.54);
+
+tl.set({}, {}, 1.840);
+window.__timelines["g12-yo"] = tl;
+})();
+</script>
+</template></body></html>

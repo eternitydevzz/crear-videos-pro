@@ -1,0 +1,78 @@
+<!doctype html>
+<html><head><meta charset="UTF-8"></head><body>
+<template>
+<style>@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-500-latin-fe1634.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-500-latin-ext-d9a6a0.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-700-latin-fe1634.woff2) format('woff2');font-weight:700;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-700-latin-ext-d9a6a0.woff2) format('woff2');font-weight:700;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'News';src:url(assets/fonts/Newsreader-italic-500-latin-78bd98.woff2) format('woff2');font-weight:500;font-style:italic;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'News';src:url(assets/fonts/Newsreader-italic-500-latin-ext-e36b6b.woff2) format('woff2');font-weight:500;font-style:italic;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Spline';src:url(assets/fonts/SplineSansMono-normal-500-latin-53329b.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Spline';src:url(assets/fonts/SplineSansMono-normal-500-latin-ext-62a811.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+#g06-motion{position:absolute;inset:0;overflow:hidden;font-family:'Hanken',sans-serif;color:#101010}
+#g06-motion .bgl{position:absolute;inset:0;background:#F5F6F8}
+#g06-motion .glow{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(0,80,224,.20),rgba(0,80,224,0) 70%)}
+#g06-motion .g1{left:-380px;top:-380px;width:1000px;height:1000px}
+#g06-motion .g2{right:-420px;bottom:-200px;width:1100px;height:1100px}
+#g06-motion .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(16,16,16,.045) 2px,transparent 2px),linear-gradient(90deg,rgba(16,16,16,.045) 2px,transparent 2px);background-size:72px 72px}
+#g06-motion .bl{--b:0;filter:blur(calc(var(--b)*1px))}
+#g06-motion .card{position:absolute;background:#fff;border-radius:36px;box-shadow:0 30px 80px rgba(16,24,40,.14),0 4px 14px rgba(16,24,40,.06)}
+#g06-motion .mono{font-family:'Spline',monospace;font-weight:500;letter-spacing:3px;text-transform:uppercase}
+#g06-motion .serif{font-family:'News',serif;font-style:italic;font-weight:500;color:#0050E0}
+#g06-motion .abs{position:absolute}
+#g06-motion .full{position:absolute;inset:0}
+
+#g06-motion .sh{left:480px;top:740px}
+#g06-motion .mword{left:0;right:0;top:700px;text-align:center;font-size:190px;font-weight:700;letter-spacing:-6px;line-height:1}
+#g06-motion .lt{display:inline-block}
+#g06-motion .sub{left:0;right:0;top:900px;text-align:center;font-size:120px}
+#g06-motion .ringp{left:240px;top:500px;width:600px;height:600px;border-radius:50%;border:6px solid #0050E0;opacity:0}
+</style>
+<div id="g06-motion" data-composition-id="g06-motion" data-width="1080" data-height="1920">
+<div class="bgl"></div><div class="grid"></div><div class="glow g1"></div><div class="glow g2"></div>
+<div id="g06-motion-wrap" class="full bl">
+
+<div class="abs ringp" id="g06-motion-rp"></div>
+<div class="abs sh" id="g06-motion-sh0"><i style="display:block;width:120px;height:120px;border-radius:50%;background:#0050E0"></i></div><div class="abs sh" id="g06-motion-sh1"><i style="display:block;width:110px;height:110px;border-radius:26px;background:#D97757"></i></div><div class="abs sh" id="g06-motion-sh2"><i style="display:block;width:120px;height:120px;border-radius:50%;border:22px solid #101010;box-sizing:border-box"></i></div><div class="abs sh" id="g06-motion-sh3"><svg viewBox="0 0 24 24" width="130" height="130" style="display:block"><path d="M12 3l10 18H2z" fill="#0050E0"/></svg></div><div class="abs sh" id="g06-motion-sh4"><i style="display:block;width:110px;height:110px;border-radius:26px;background:#101010"></i></div><div class="abs sh" id="g06-motion-sh5"><i style="display:block;width:120px;height:120px;border-radius:50%;background:#D97757"></i></div><div class="abs sh" id="g06-motion-sh6"><i style="display:block;width:120px;height:120px;border-radius:50%;border:22px solid #0050E0;box-sizing:border-box"></i></div><div class="abs sh" id="g06-motion-sh7"><svg viewBox="0 0 24 24" width="130" height="130" style="display:block"><path d="M12 3l10 18H2z" fill="#D97757"/></svg></div>
+<div class="abs mword" id="g06-motion-w"><span class="lt" id="g06-motion-l0">M</span><span class="lt" id="g06-motion-l1">O</span><span class="lt" id="g06-motion-l2">T</span><span class="lt" id="g06-motion-l3">I</span><span class="lt" id="g06-motion-l4">O</span><span class="lt" id="g06-motion-l5">N</span></div>
+<div class="abs serif sub bl" id="g06-motion-sub">graphics</div>
+
+</div>
+</div>
+<script>
+(function(){
+const tl = gsap.timeline({paused: true});
+
+const F = 1/30;
+const sn = t => Math.round(t*30)/30;
+const IN = (sel, t, o) => {const r = (o&&o.rot)||0; const f = Object.assign({y: 90, scale: .92, "--b": 14, opacity: 0}, o||{}); delete f.rot; return tl.fromTo(sel, f, {y: 0, x: 0, scale: 1, rotation: r, "--b": 0, opacity: 1, duration: .32, ease: "power3.out"}, sn(t));};
+const POP = (sel, t, r) => tl.fromTo(sel, {scale: 0, opacity: 0, rotation: (r||0) - 12}, {scale: 1, opacity: 1, rotation: r||0, duration: .3, ease: "back.out(2.4)"}, sn(t));
+const SCENE_IN = () => tl.fromTo("#g06-motion-wrap", {scale: 1.12, "--b": 18, opacity: .2}, {scale: 1, "--b": 0, opacity: 1, duration: .22, ease: "power3.out"}, 0);
+
+SCENE_IN();
+tl.fromTo("#g06-motion-rp", {scale: .2, opacity: 1}, {scale: 1.6, opacity: 0, duration: .6, ease: "power2.out"}, .05);
+tl.fromTo("#g06-motion-sh0", {x: 0, y: 0, scale: 0, rotation: 0}, {x: -40, y: -360, scale: 1, rotation: 180, duration: .5, ease: "expo.out"}, 0.10);
+tl.to("#g06-motion-sh0", {rotation: "+=120", y: "+=40", duration: 1, ease: "sine.inOut"}, 0.62);
+tl.fromTo("#g06-motion-sh1", {x: 0, y: 0, scale: 0, rotation: 0}, {x: 330, y: -300, scale: 1, rotation: 225, duration: .5, ease: "expo.out"}, 0.13);
+tl.to("#g06-motion-sh1", {rotation: "+=120", y: "+=-40", duration: 1, ease: "sine.inOut"}, 0.65);
+tl.fromTo("#g06-motion-sh2", {x: 0, y: 0, scale: 0, rotation: 0}, {x: -290, y: 360, scale: 1, rotation: 270, duration: .5, ease: "expo.out"}, 0.16);
+tl.to("#g06-motion-sh2", {rotation: "+=120", y: "+=40", duration: 1, ease: "sine.inOut"}, 0.68);
+tl.fromTo("#g06-motion-sh3", {x: 0, y: 0, scale: 0, rotation: 0}, {x: 290, y: 420, scale: 1, rotation: 315, duration: .5, ease: "expo.out"}, 0.19);
+tl.to("#g06-motion-sh3", {rotation: "+=120", y: "+=-40", duration: 1, ease: "sine.inOut"}, 0.71);
+tl.fromTo("#g06-motion-sh4", {x: 0, y: 0, scale: 0, rotation: 0}, {x: -330, y: -360, scale: 1, rotation: 360, duration: .5, ease: "expo.out"}, 0.22);
+tl.to("#g06-motion-sh4", {rotation: "+=120", y: "+=40", duration: 1, ease: "sine.inOut"}, 0.74);
+tl.fromTo("#g06-motion-sh5", {x: 0, y: 0, scale: 0, rotation: 0}, {x: 370, y: 60, scale: 1, rotation: 405, duration: .5, ease: "expo.out"}, 0.25);
+tl.to("#g06-motion-sh5", {rotation: "+=120", y: "+=-40", duration: 1, ease: "sine.inOut"}, 0.77);
+tl.fromTo("#g06-motion-sh6", {x: 0, y: 0, scale: 0, rotation: 0}, {x: -40, y: 360, scale: 1, rotation: 450, duration: .5, ease: "expo.out"}, 0.28);
+tl.to("#g06-motion-sh6", {rotation: "+=120", y: "+=40", duration: 1, ease: "sine.inOut"}, 0.80);
+tl.fromTo("#g06-motion-sh7", {x: 0, y: 0, scale: 0, rotation: 0}, {x: -330, y: 60, scale: 1, rotation: 495, duration: .5, ease: "expo.out"}, 0.31);
+tl.to("#g06-motion-sh7", {rotation: "+=120", y: "+=-40", duration: 1, ease: "sine.inOut"}, 0.83);
+
+tl.fromTo("#g06-motion-l0", {y: 160, opacity: 0, rotation: 25}, {y: 0, opacity: 1, rotation: 0, duration: .32, ease: "back.out(2)"}, 0.22);tl.fromTo("#g06-motion-l1", {y: 160, opacity: 0, rotation: -25}, {y: 0, opacity: 1, rotation: 0, duration: .32, ease: "back.out(2)"}, 0.26);tl.fromTo("#g06-motion-l2", {y: 160, opacity: 0, rotation: 25}, {y: 0, opacity: 1, rotation: 0, duration: .32, ease: "back.out(2)"}, 0.30);tl.fromTo("#g06-motion-l3", {y: 160, opacity: 0, rotation: -25}, {y: 0, opacity: 1, rotation: 0, duration: .32, ease: "back.out(2)"}, 0.34);tl.fromTo("#g06-motion-l4", {y: 160, opacity: 0, rotation: 25}, {y: 0, opacity: 1, rotation: 0, duration: .32, ease: "back.out(2)"}, 0.38);tl.fromTo("#g06-motion-l5", {y: 160, opacity: 0, rotation: -25}, {y: 0, opacity: 1, rotation: 0, duration: .32, ease: "back.out(2)"}, 0.42);
+IN("#g06-motion-sub", .5, {y: 60});
+
+tl.set({}, {}, 1.470);
+window.__timelines["g06-motion"] = tl;
+})();
+</script>
+</template></body></html>

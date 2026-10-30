@@ -1,0 +1,32 @@
+# Texto: siempre LF (si un .sh llega con CRLF a Git Bash, falla con "\r")
+* text=auto eol=lf
+*.sh   text eol=lf
+*.py   text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.txt  text eol=lf
+*.html text eol=lf
+
+# Windows: CMD y PowerShell con CRLF
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binarios: git no los toca
+*.mp4  binary
+*.mov  binary
+*.mp3  binary
+*.m4a  binary
+*.wav  binary
+*.flac binary
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.gif  binary
+*.webp binary
+*.ttf  binary
+*.otf  binary
+*.ttc  binary
+*.woff binary
+*.woff2 binary
+*.icc  binary
+*.zip  binary

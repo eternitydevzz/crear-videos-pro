@@ -1,0 +1,60 @@
+<!doctype html>
+<html><head><meta charset="UTF-8"></head><body>
+<template>
+<style>@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-500-latin-fe1634.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-500-latin-ext-d9a6a0.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-700-latin-fe1634.woff2) format('woff2');font-weight:700;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-700-latin-ext-d9a6a0.woff2) format('woff2');font-weight:700;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'News';src:url(assets/fonts/Newsreader-italic-500-latin-78bd98.woff2) format('woff2');font-weight:500;font-style:italic;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'News';src:url(assets/fonts/Newsreader-italic-500-latin-ext-e36b6b.woff2) format('woff2');font-weight:500;font-style:italic;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Spline';src:url(assets/fonts/SplineSansMono-normal-500-latin-53329b.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Spline';src:url(assets/fonts/SplineSansMono-normal-500-latin-ext-62a811.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+#g10-meses{position:absolute;inset:0;overflow:hidden;font-family:'Hanken',sans-serif;color:#101010}
+#g10-meses .bgl{position:absolute;inset:0;background:#F5F6F8}
+#g10-meses .glow{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(0,80,224,.20),rgba(0,80,224,0) 70%)}
+#g10-meses .g1{left:-380px;top:-380px;width:1000px;height:1000px}
+#g10-meses .g2{right:-420px;bottom:-200px;width:1100px;height:1100px}
+#g10-meses .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(16,16,16,.045) 2px,transparent 2px),linear-gradient(90deg,rgba(16,16,16,.045) 2px,transparent 2px);background-size:72px 72px}
+#g10-meses .bl{--b:0;filter:blur(calc(var(--b)*1px))}
+#g10-meses .card{position:absolute;background:#fff;border-radius:36px;box-shadow:0 30px 80px rgba(16,24,40,.14),0 4px 14px rgba(16,24,40,.06)}
+#g10-meses .mono{font-family:'Spline',monospace;font-weight:500;letter-spacing:3px;text-transform:uppercase}
+#g10-meses .serif{font-family:'News',serif;font-style:italic;font-weight:500;color:#0050E0}
+#g10-meses .abs{position:absolute}
+#g10-meses .full{position:absolute;inset:0}
+
+#g10-meses .chart{left:110px;top:290px;width:860px;height:900px;padding:60px 50px 40px;display:flex;align-items:flex-end;justify-content:space-between}
+#g10-meses .col{display:flex;flex-direction:column;align-items:center;gap:20px}
+#g10-meses .bar{position:relative;width:120px;border-radius:24px 24px 10px 10px;background:linear-gradient(180deg,#0050E0,#3d7bff);transform-origin:50% 100%}
+#g10-meses .plus{position:absolute;left:0;right:0;top:18px;text-align:center;color:#fff;font-size:26px}
+#g10-meses .mm{font-size:26px;color:#5b6170}
+#g10-meses .hd{left:170px;top:350px;font-size:76px;font-weight:700;letter-spacing:-2px;z-index:2}
+</style>
+<div id="g10-meses" data-composition-id="g10-meses" data-width="1080" data-height="1920">
+<div class="bgl"></div><div class="grid"></div><div class="glow g1"></div><div class="glow g2"></div>
+<div id="g10-meses-wrap" class="full bl">
+
+<div class="card chart bl" id="g10-meses-c"><div class="col"><div class="bar" id="g10-meses-b0" style="height:180px"><span class="mono plus">+$</span></div><span class="mono mm">ENE</span></div><div class="col"><div class="bar" id="g10-meses-b1" style="height:280px"><span class="mono plus">+$</span></div><span class="mono mm">FEB</span></div><div class="col"><div class="bar" id="g10-meses-b2" style="height:400px"><span class="mono plus">+$</span></div><span class="mono mm">MAR</span></div><div class="col"><div class="bar" id="g10-meses-b3" style="height:520px"><span class="mono plus">+$</span></div><span class="mono mm">ABR</span></div><div class="col"><div class="bar" id="g10-meses-b4" style="height:660px"><span class="mono plus">+$</span></div><span class="mono mm">MAY</span></div></div>
+<div class="abs hd bl" id="g10-meses-hd"><span class="serif">miles</span>, cada mes</div>
+
+</div>
+</div>
+<script>
+(function(){
+const tl = gsap.timeline({paused: true});
+
+const F = 1/30;
+const sn = t => Math.round(t*30)/30;
+const IN = (sel, t, o) => {const r = (o&&o.rot)||0; const f = Object.assign({y: 90, scale: .92, "--b": 14, opacity: 0}, o||{}); delete f.rot; return tl.fromTo(sel, f, {y: 0, x: 0, scale: 1, rotation: r, "--b": 0, opacity: 1, duration: .32, ease: "power3.out"}, sn(t));};
+const POP = (sel, t, r) => tl.fromTo(sel, {scale: 0, opacity: 0, rotation: (r||0) - 12}, {scale: 1, opacity: 1, rotation: r||0, duration: .3, ease: "back.out(2.4)"}, sn(t));
+const SCENE_IN = () => tl.fromTo("#g10-meses-wrap", {scale: 1.12, "--b": 18, opacity: .2}, {scale: 1, "--b": 0, opacity: 1, duration: .22, ease: "power3.out"}, 0);
+
+SCENE_IN();
+IN("#g10-meses-c", 0, {y: 140});
+tl.fromTo("#g10-meses-b0", {scaleY: 0}, {scaleY: 1, duration: .3, ease: "back.out(1.6)"}, 0.12);tl.fromTo("#g10-meses-b1", {scaleY: 0}, {scaleY: 1, duration: .3, ease: "back.out(1.6)"}, 0.22);tl.fromTo("#g10-meses-b2", {scaleY: 0}, {scaleY: 1, duration: .3, ease: "back.out(1.6)"}, 0.32);tl.fromTo("#g10-meses-b3", {scaleY: 0}, {scaleY: 1, duration: .3, ease: "back.out(1.6)"}, 0.42);tl.fromTo("#g10-meses-b4", {scaleY: 0}, {scaleY: 1, duration: .3, ease: "back.out(1.6)"}, 0.52);
+IN("#g10-meses-hd", .2, {y: 40});
+
+tl.set({}, {}, 1.170);
+window.__timelines["g10-meses"] = tl;
+})();
+</script>
+</template></body></html>

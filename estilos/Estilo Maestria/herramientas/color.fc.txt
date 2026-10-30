@@ -1,0 +1,1 @@
+[0:v]split=3[a][b][c];[b]curves=all='0/0 0.35/0.52 1/1',format=yuva444p[br];[c]format=yuva444p,chromakey=color=0x3468D8:similarity=0.08:blend=0.08,alphaextract[m];[br][m]alphamerge[p];[a][p]overlay=format=auto,format=yuv420p[v]

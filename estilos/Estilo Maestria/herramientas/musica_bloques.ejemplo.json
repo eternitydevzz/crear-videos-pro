@@ -1,0 +1,14 @@
+{
+  "_nota": "Ejemplo: la música de YouTube 2 tal como quedó (sin el cierre). Volúmenes = los que pidió el presentador sobre lo nivelado.",
+  "video": "mis-videos/<vídeo>/v10.mp4",
+  "cortes": [0, 103, 352, 524, 721],
+  "bloques": [
+    {"pista": "mis-videos/<vídeo>/musica/ES_Escalation - Jon Bjork.wav", "volumen": 0.32},
+    {"pista": "mis-videos/<vídeo>/musica/ES_Impossible Theory - Rachel Sandy.wav", "volumen": 0.4},
+    {"pista": "mis-videos/<vídeo>/musica/ES_Trace - Lennon Hutton.wav", "recorte": 14, "volumen": 0.5},
+    {"pista": "mis-videos/<vídeo>/musica/ES_Conclusion - Max Anson.wav", "volumen": 0.4375},
+    {"pista": "mis-videos/<vídeo>/musica/ES_Fable - Jakob Ahlbom.wav", "volumen": 0.5}
+  ],
+  "objetivo_db": -10,
+  "wav_salida": "mis-videos/<vídeo>/prueba-musica.wav"
+}

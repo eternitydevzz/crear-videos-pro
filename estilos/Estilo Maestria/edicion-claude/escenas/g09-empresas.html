@@ -1,0 +1,66 @@
+<!doctype html>
+<html><head><meta charset="UTF-8"></head><body>
+<template>
+<style>@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-500-latin-fe1634.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-500-latin-ext-d9a6a0.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-700-latin-fe1634.woff2) format('woff2');font-weight:700;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Hanken';src:url(assets/fonts/HankenGrotesk-normal-700-latin-ext-d9a6a0.woff2) format('woff2');font-weight:700;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'News';src:url(assets/fonts/Newsreader-italic-500-latin-78bd98.woff2) format('woff2');font-weight:500;font-style:italic;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'News';src:url(assets/fonts/Newsreader-italic-500-latin-ext-e36b6b.woff2) format('woff2');font-weight:500;font-style:italic;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Spline';src:url(assets/fonts/SplineSansMono-normal-500-latin-53329b.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:'Spline';src:url(assets/fonts/SplineSansMono-normal-500-latin-ext-62a811.woff2) format('woff2');font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+#g09-empresas{position:absolute;inset:0;overflow:hidden;font-family:'Hanken',sans-serif;color:#101010}
+#g09-empresas .bgl{position:absolute;inset:0;background:#F5F6F8}
+#g09-empresas .glow{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(0,80,224,.20),rgba(0,80,224,0) 70%)}
+#g09-empresas .g1{left:-380px;top:-380px;width:1000px;height:1000px}
+#g09-empresas .g2{right:-420px;bottom:-200px;width:1100px;height:1100px}
+#g09-empresas .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(16,16,16,.045) 2px,transparent 2px),linear-gradient(90deg,rgba(16,16,16,.045) 2px,transparent 2px);background-size:72px 72px}
+#g09-empresas .bl{--b:0;filter:blur(calc(var(--b)*1px))}
+#g09-empresas .card{position:absolute;background:#fff;border-radius:36px;box-shadow:0 30px 80px rgba(16,24,40,.14),0 4px 14px rgba(16,24,40,.06)}
+#g09-empresas .mono{font-family:'Spline',monospace;font-weight:500;letter-spacing:3px;text-transform:uppercase}
+#g09-empresas .serif{font-family:'News',serif;font-style:italic;font-weight:500;color:#0050E0}
+#g09-empresas .abs{position:absolute}
+#g09-empresas .full{position:absolute;inset:0}
+
+#g09-empresas .prop{left:190px;top:300px;width:700px;height:400px;padding:50px 56px}
+#g09-empresas .pl{font-size:26px;color:#6b7280}
+#g09-empresas .pt{margin-top:20px;font-size:62px;font-weight:700;letter-spacing:-2px;line-height:1.05}
+#g09-empresas .pb{margin-top:34px;display:inline-flex;align-items:center;gap:14px;padding:16px 28px;border-radius:999px;background:#0050E0;color:#fff;font-size:32px;font-weight:700}
+#g09-empresas .co{top:930px;width:260px;height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px}
+#g09-empresas .cn{font-size:22px;color:#5b6170}
+#g09-empresas .tick{position:absolute;right:-18px;top:-18px;width:76px;height:76px;border-radius:50%;background:#16A34A;display:flex;align-items:center;justify-content:center;opacity:0}
+#g09-empresas .path{left:536px;top:700px;width:8px;height:230px;background:repeating-linear-gradient(#0050E0 0 18px,transparent 18px 32px);transform-origin:50% 0;transform:scaleY(0)}
+</style>
+<div id="g09-empresas" data-composition-id="g09-empresas" data-width="1080" data-height="1920">
+<div class="bgl"></div><div class="grid"></div><div class="glow g1"></div><div class="glow g2"></div>
+<div id="g09-empresas-wrap" class="full bl">
+
+<div class="card prop bl" id="g09-empresas-p"><div class="mono pl">Propuesta</div><div class="pt">Vídeos con IA<br><span class="serif">para tu marca</span></div>
+<div class="pb" id="g09-empresas-pb">Enviar →</div></div>
+<div class="abs path" id="g09-empresas-path"></div>
+<div class="card co bl" id="g09-empresas-c0" style="left:90px"><svg viewBox="0 0 24 24" width="84" height="84" style="display:block"><path d="M4 21V5l8-3v19M12 21V9l8 3v9M2 21h20" fill="none" stroke="#101010" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 8h2M7 12h2M7 16h2M15 14h2M15 17h2" stroke="#101010" stroke-width="1.8"/></svg><span class="mono cn">Empresa</span><span class="tick" id="g09-empresas-k0"><svg viewBox="0 0 24 24" width="40" height="40" style="display:block"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="card co bl" id="g09-empresas-c1" style="left:410px"><svg viewBox="0 0 24 24" width="84" height="84" style="display:block"><path d="M4 21V5l8-3v19M12 21V9l8 3v9M2 21h20" fill="none" stroke="#101010" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 8h2M7 12h2M7 16h2M15 14h2M15 17h2" stroke="#101010" stroke-width="1.8"/></svg><span class="mono cn">Empresa</span><span class="tick" id="g09-empresas-k1"><svg viewBox="0 0 24 24" width="40" height="40" style="display:block"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="card co bl" id="g09-empresas-c2" style="left:730px"><svg viewBox="0 0 24 24" width="84" height="84" style="display:block"><path d="M4 21V5l8-3v19M12 21V9l8 3v9M2 21h20" fill="none" stroke="#101010" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 8h2M7 12h2M7 16h2M15 14h2M15 17h2" stroke="#101010" stroke-width="1.8"/></svg><span class="mono cn">Empresa</span><span class="tick" id="g09-empresas-k2"><svg viewBox="0 0 24 24" width="40" height="40" style="display:block"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+
+</div>
+</div>
+<script>
+(function(){
+const tl = gsap.timeline({paused: true});
+
+const F = 1/30;
+const sn = t => Math.round(t*30)/30;
+const IN = (sel, t, o) => {const r = (o&&o.rot)||0; const f = Object.assign({y: 90, scale: .92, "--b": 14, opacity: 0}, o||{}); delete f.rot; return tl.fromTo(sel, f, {y: 0, x: 0, scale: 1, rotation: r, "--b": 0, opacity: 1, duration: .32, ease: "power3.out"}, sn(t));};
+const POP = (sel, t, r) => tl.fromTo(sel, {scale: 0, opacity: 0, rotation: (r||0) - 12}, {scale: 1, opacity: 1, rotation: r||0, duration: .3, ease: "back.out(2.4)"}, sn(t));
+const SCENE_IN = () => tl.fromTo("#g09-empresas-wrap", {scale: 1.12, "--b": 18, opacity: .2}, {scale: 1, "--b": 0, opacity: 1, duration: .22, ease: "power3.out"}, 0);
+
+SCENE_IN();
+IN("#g09-empresas-p", 0, {opacity: 1});
+IN("#g09-empresas-c0", 0.12, {y: 200});IN("#g09-empresas-c1", 0.18, {y: 200});IN("#g09-empresas-c2", 0.24, {y: 200});
+tl.to("#g09-empresas-pb", {scale: .9, duration: .06, yoyo: true, repeat: 1}, .6);
+tl.to("#g09-empresas-path", {scaleY: 1, duration: .25, ease: "power2.out"}, .7);
+POP("#g09-empresas-k0", 1.61, 0); tl.to("#g09-empresas-c0", {y: -20, duration: .12, yoyo: true, repeat: 1}, 1.61);POP("#g09-empresas-k1", 1.73, 0); tl.to("#g09-empresas-c1", {y: -20, duration: .12, yoyo: true, repeat: 1}, 1.73);POP("#g09-empresas-k2", 1.85, 0); tl.to("#g09-empresas-c2", {y: -20, duration: .12, yoyo: true, repeat: 1}, 1.85);
+
+tl.set({}, {}, 1.970);
+window.__timelines["g09-empresas"] = tl;
+})();
+</script>
+</template></body></html>

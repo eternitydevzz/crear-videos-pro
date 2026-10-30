@@ -1,0 +1,31 @@
+# Interno: no se sube
+PLAN.md
+
+# Lo que crea cada usuario (vive fuera del repo, por si acaso)
+mis-videos/
+mis-estilos/
+
+# Secretos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Python, Node y temporales
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+renders/
+snapshots/
+*.log
+tmp/
